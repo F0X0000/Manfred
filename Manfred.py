@@ -35,7 +35,7 @@ odpal = ["odpal"]
 google = ["google"]
 jaka = ["jaka"]
 jest = ["jest"]
-setupup = ["satup"]
+setupup = ["setup", "set up"]
 temperatura = ["temperatura"]
 w = ["w"]
 BIAŁYSTOK = ["białymstoku"]
@@ -67,7 +67,9 @@ def COMMAND():
                 if len(czy(audio, RESTART_ADMIN)):
                     os.system("cls")
                     os.system("python Manfred.py")
-                if len(czy())
+                if len(czy(audio, setupup)):
+                    say("ok")
+                    setupadd()
             if len(czy(audio, KLUCZ_COMMAND)):
                 if len(czy(audio, jaka)):
                     if len(czy(audio, jest)):

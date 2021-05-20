@@ -26,7 +26,7 @@ def youtubeopen(text):
     video = re.findall(r"watch\?v=(\S{11})", html.read().decode())
     webbrowser.open("https://www.youtube.com/watch?v=" + video[0])
 
-def satupadd():
+def setupadd():
     import os
     os.system("PyAudio-0.2.11-cp39-cp39-win_amd64.whl")
     os.system("pip install SpeechRecognition")
