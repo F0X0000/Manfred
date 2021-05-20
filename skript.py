@@ -21,8 +21,10 @@ def youtubeopen(text):
     import webbrowser
     import say
 
+    text2 = text.replace(" ", "+").replace("?", "%3F")
+
     say.say("odpalam")
-    html = urllib.request.urlopen("https://www.youtube.com/results?search_query=" + text)
+    html = urllib.request.urlopen("https://www.youtube.com/results?search_query=" + text2)
     video = re.findall(r"watch\?v=(\S{11})", html.read().decode())
     webbrowser.open("https://www.youtube.com/watch?v=" + video[0])
 

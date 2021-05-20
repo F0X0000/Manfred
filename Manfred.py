@@ -38,10 +38,12 @@ jest = ["jest"]
 setupup = ["setup", "set up"]
 temperatura = ["temperatura"]
 w = ["w"]
-BIAŁYSTOK = ["białymstoku"]
+BIAŁYSTOK = ["białyestoku"]
+czestochowa = ["częstochowa", "częstochowie"]
+Chojnice = ["chojnice"]
 BIELSK = ["bielsk", "bielsko"]
 bielskbiałej = ["bielsk-białej", "bielsku-białej"]
-BIAŁE = ["białe"]
+BIAŁE = ["białe", "biała"]
 WARSZAWA = ["warszawie"]
 wyszukaj = ["wyszukaj"]
 
@@ -83,7 +85,12 @@ def COMMAND():
                                     pogo("Bielsko")
                                 if len(czy(audio, BIELSK)):
                                     if len(czy(audio, BIAŁE)):
-                                        pogo("Bielsko Biała")
+                                        temp("Bielsko Biała")
+                                if len(czy(audio, Chojnice)):
+                                    temp("Chojnice")
+                                if len(czy(audio, czestochowa)):
+                                    temp("Częstochowa")
+
 
                 if len(czy(audio, wyszukaj)):
                     g = audio.lower().split(' ' + czy(audio, wyszukaj)[0] + ' ')[1]
