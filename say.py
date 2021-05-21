@@ -11,5 +11,6 @@ def say(text):
     os.remove('voice.mp3')
 
 def lossay(text):
+    import random
     a = random.choice(text)
     say(a)

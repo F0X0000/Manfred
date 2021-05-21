@@ -46,6 +46,8 @@ bielskbiałej = ["bielsk-białej", "bielsku-białej"]
 BIAŁE = ["białe", "biała"]
 WARSZAWA = ["warszawie"]
 wyszukaj = ["wyszukaj"]
+zart = ["żart"]
+zartycommand = ["nauczyciel języka polskiego pyta się uczniów jak brzmi liczba mnoga do rzeczownika niedziela wakacje proszę pani"]
 
 ################################################################################
 
@@ -73,6 +75,8 @@ def COMMAND():
                     say("ok")
                     setupadd()
             if len(czy(audio, KLUCZ_COMMAND)):
+                if len(czy(audio, zart)):
+                    lossay(zartycommand)
                 if len(czy(audio, jaka)):
                     if len(czy(audio, jest)):
                         if len(czy(audio, temperatura)):
@@ -82,7 +86,7 @@ def COMMAND():
                                 if len(czy(audio, WARSZAWA)):
                                     temp("Warszawa")
                                 if len(czy(audio, bielskbiałej)):
-                                    pogo("Bielsko")
+                                    pogo("Bielsko Biała")
                                 if len(czy(audio, BIELSK)):
                                     if len(czy(audio, BIAŁE)):
                                         temp("Bielsko Biała")
@@ -90,8 +94,6 @@ def COMMAND():
                                     temp("Chojnice")
                                 if len(czy(audio, czestochowa)):
                                     temp("Częstochowa")
-
-
                 if len(czy(audio, wyszukaj)):
                     g = audio.lower().split(' ' + czy(audio, wyszukaj)[0] + ' ')[1]
                     say("Oto co mi się udało znaleść.")
