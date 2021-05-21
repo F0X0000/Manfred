@@ -36,3 +36,7 @@ def setupadd():
     os.system("pip install playsound")
     os.system("pip install gTTS")
     os.system("cls")
+
+def play(play):
+    import playsound
+    playsound.playsound(play)

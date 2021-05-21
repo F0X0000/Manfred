@@ -51,6 +51,8 @@ zartycommand = ["nauczyciel języka polskiego pyta się uczniów jak brzmi liczb
 
 ################################################################################
 
+hahababy = "audio/haha/baby.mp3"
+
 ################################################################################
 
 def COMMAND():
@@ -77,6 +79,7 @@ def COMMAND():
             if len(czy(audio, KLUCZ_COMMAND)):
                 if len(czy(audio, zart)):
                     lossay(zartycommand)
+                    play(hahababy)
                 if len(czy(audio, jaka)):
                     if len(czy(audio, jest)):
                         if len(czy(audio, temperatura)):
