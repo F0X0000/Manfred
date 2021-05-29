@@ -40,17 +40,20 @@ jest = ["jest"]
 setupup = ["setup", "set up"]
 temperatura = ["temperatura"]
 w = ["w"]
-BIAŁYSTOK = ["białyestoku"]
 czestochowa = ["częstochowa", "częstochowie"]
+
+BIAŁYSTOK = ["białyestoku"]
 Chojnice = ["chojnice"]
 BIELSK = ["bielsk", "bielsko"]
 bielskbiałej = ["bielsk-białej", "bielsku-białej"]
 BIAŁE = ["białe", "biała"]
 WARSZAWA = ["warszawie"]
+
 wyszukaj = ["wyszukaj"]
 zart = ["żart"]
-spotif = ["spotify"]
 zartycommand = ["nauczyciel języka polskiego pyta się uczniów jak brzmi liczba mnoga do rzeczownika niedziela? Wakacje proszę pani", "Jak się nazywa lekarz, który leczy pandy? Pandoktor", "Dlaczego duchy nie kłamią? Bo wiedzą, że możesz je przejrzeć na wylot", " koniec roku szkolnego. tato, ty to masz szczęście do pieniędzy, Dlaczego? nie  musisz kupować książek na przyszły rok zostaje w tej samej klasie", "panie doktoże wczyscy mnie ignowują. Następny proczę"]
+
+spotif = ["spotify"]
 instagram = ["instagram"]
 netflix = ["netflix"]
 facebook = ["facebook", "facebooka"]
@@ -58,6 +61,7 @@ gmail = ["gmail"]
 
 ################################################################################
 
+zart1 = '0'
 hahababy = "audio/haha/baby.mp3"
 
 ################################################################################
@@ -68,11 +72,6 @@ def COMMAND():
         audio = get_audio()
         if audio != None:
             if len(czy(audio, ADMIN_COMMADN)):
-                if len(czy(audio, google)):
-                    g = audio.lower().split(' ' + czy(audio, google)[0] + ' ')[1]
-                    say("Oto co mi się znaleść.")
-                    googleurl = "https://www.google.com/search?q=" + g.replace(" ", "+").replace("?", "%3F")
-                    webbrowser.open(googleurl)
                 if len(czy(audio, PA_ADMIN)):
                     say("pa")
                     quit()
@@ -111,14 +110,19 @@ def COMMAND():
                     webbrowser.open(googleurl)
                 if len(czy(audio, odpal)):
                     if len(czy(audio, spotif)):
+                        say("ok")
                         webbrowser.open("https://open.spotify.com/")
                     if len(czy(audio, netflix)):
+                        say("ok")
                         webbrowser.open("https://www.netflix.com/")
                     if len(czy(audio, instagram)):
+                        say("ok")
                         webbrowser.open("https://www.instagram.com/")
                     if len(czy(audio, facebook)):
+                        say("ok")
                         webbrowser.open("https://www.facebook.com/")
                     if len(czy(audio, gmail)):
+                        say("ok")
                         webbrowser.open("https://mail.google.com/")
                     if len(czy(audio, PROSZE)):
                         if len(czy(audio, yt)):
