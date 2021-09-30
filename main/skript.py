@@ -1,7 +1,7 @@
 def setup():
     import os
     r = ["t"]
-    f = open("install.txt", "r+")
+    f = open("pliki/install.txt", "r+")
     fr = f.read(1)
     if fr in r:
         print(" ")
